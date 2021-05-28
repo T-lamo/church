@@ -1,8 +1,12 @@
-export class member {
+export class Member {
     sexe: string;
     dob: string;
-    constructor(public firstname: string, public lastname: string) {
+    firstname: string;
+    lastname: string;
+    constructor(firstname:string, lastname: string) {
         this.sexe ="";
         this.dob="";
+        this.firstname=firstname;
+        this.lastname =lastname;
     }
   }
