@@ -14,7 +14,7 @@
 
 
 
-<form [formGroup]="memberForm">
+<form [formGroup]="memberForm" (ngSubmit)="submit()>
     <div class="form-group">
         <label for="exampleInputEmail1">Firstname</label>
         <input class="form-control" type="text" formControlName="firstname" value="Amos" id="firstname" name="firstname" >
@@ -42,6 +42,6 @@
           </div>
          
     </div>
-    <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 

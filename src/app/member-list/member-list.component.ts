@@ -46,15 +46,9 @@ export class MemberListComponent implements OnInit {
   }
 
   submit(){
-  
-    let m =new Member(this.memberForm.get("firstname")?.value,this.memberForm.get("lastname")?.value,this.memberForm.get("dob")?.value,this.memberForm.get("sexe")?.value)
-    console.log(this.memberForm.get("firstname")?.value);
-    console.log(this.memberForm.get("lastname")?.value);
-    console.log(this.memberForm.get("dob")?.value);
-    console.log(this.memberForm.get("sexe")?.value);
+    console.log(this.memberForm.value);
+    let m =new Member(this.memberForm.get("firstname")?.value,this.memberForm.get("lastname")?.value,this.memberForm.get("dob")?.value,this.memberForm.get("sexe")?.value);
     this.membersService.createMember(Object.assign({}, m));
-
-
   }
 
   deleteMember(id:string=""){
